@@ -1,5 +1,7 @@
 # Unreleased
 
+  * Process DTLS 1.2 handshake messages by sequence number when records arrive out of order
+
 # 0.7.4
 
   * Preserve DTLS 1.3 client key shares on cookie-only retries #163
