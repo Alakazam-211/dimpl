@@ -1,7 +1,13 @@
-# Unreleased
+# sew-dimpl 0.7.5
+
+The first release of sew-dimpl, the fork of dimpl published for Sew.
+Upstream base: dimpl 0.7.4 (commit `09bf3fc8`).
 
   * Process DTLS 1.2 handshake messages by sequence number when records arrive out of order
   * Resend a handshake flight at most once per timer period on duplicates of the peer's flight
+  * Package renamed to `sew-dimpl`; the library is still `dimpl`
+
+The entries below are upstream dimpl's.
 
 # 0.7.4
 

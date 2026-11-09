@@ -11,6 +11,7 @@ cargo-fuzz = true
 libfuzzer-sys = "0.4"
 
 [dependencies.dimpl]
+package = "sew-dimpl"
 path = ".."
 # Need rcgen to generate certificates for the Dtls instance
 features = ["rcgen"]

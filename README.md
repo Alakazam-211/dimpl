@@ -1,3 +1,33 @@
+# sew-dimpl
+
+**sew-dimpl is a fork of [dimpl](https://github.com/algesten/dimpl), with Sew's patches.** It is
+not affiliated with or endorsed by the dimpl authors.
+
+- **Upstream base:** dimpl 0.7.4, commit
+  [`09bf3fc8`](https://github.com/algesten/dimpl/commit/09bf3fc89c3cdb06030a90e8e1043983c791e2b6).
+- **Our patches** (DTLS behaviour only; the public API is upstream's):
+  - Process DTLS 1.2 handshake messages by sequence number when the records of a datagram arrive
+    out of order, instead of stalling on the head of the receive queue
+    ([`8162f4d0`](https://github.com/Alakazam-211/dimpl/commit/8162f4d0ca98fb8178bd124abf0ca55baa9684a9)).
+  - Resend a handshake flight at most once per timer period on duplicates of the peer's flight,
+    in DTLS 1.2 and 1.3, so two waiting endpoints cannot bounce flights at network speed
+    ([`a3481943`](https://github.com/Alakazam-211/dimpl/commit/a3481943e8e3fa270990e7c05a27d015cfbe4d77)).
+
+  Both were offered upstream in [dimpl#168](https://github.com/algesten/dimpl/pull/168); upstream
+  fixed the same problems its own way in [dimpl#169](https://github.com/algesten/dimpl/pull/169)
+  (released in dimpl 0.7.5).
+- **Use it** under the library's upstream name, so code still says `dimpl::…`:
+  `dimpl = { package = "sew-dimpl", version = "0.7.5" }`.
+- **Licence:** upstream's, MIT OR Apache-2.0 ([LICENSE-MIT.txt](LICENSE-MIT.txt),
+  [LICENSE-APACHE.txt](LICENSE-APACHE.txt)). Credit for dimpl belongs to its authors.
+- **Security fixes** from upstream are merged into this fork promptly.
+- **Returning to upstream:** once an upstream release carries these fixes, Sew goes back to
+  upstream dimpl and this fork gets a final note here.
+
+Release notes: [CHANGELOG.md](CHANGELOG.md). Upstream's README follows.
+
+---
+
 # dimpl
 
 dimpl — DTLS 1.2 and 1.3 implementation (Sans‑IO, Sync)

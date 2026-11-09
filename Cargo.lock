@@ -477,47 +477,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "dimpl"
-version = "0.7.4"
-dependencies = [
- "aes",
- "aes-gcm",
- "arrayvec",
- "aws-lc-rs",
- "bytes",
- "ccm",
- "chacha20",
- "chacha20poly1305",
- "der",
- "ecdsa",
- "env_logger",
- "generic-array",
- "hkdf",
- "hmac",
- "libc",
- "log",
- "nom 8.0.0",
- "once_cell",
- "openssl",
- "p256",
- "p384",
- "pkcs8",
- "rand",
- "rand_core 0.6.4",
- "rcgen",
- "sec1",
- "sha2",
- "signature",
- "spki",
- "subtle",
- "time",
- "wolfssl",
- "x25519-dalek",
- "x509-cert",
- "x509-parser",
-]
-
-[[package]]
 name = "displaydoc"
 version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1338,6 +1297,47 @@ dependencies = [
  "serde",
  "serde_core",
  "zmij",
+]
+
+[[package]]
+name = "sew-dimpl"
+version = "0.7.5"
+dependencies = [
+ "aes",
+ "aes-gcm",
+ "arrayvec",
+ "aws-lc-rs",
+ "bytes",
+ "ccm",
+ "chacha20",
+ "chacha20poly1305",
+ "der",
+ "ecdsa",
+ "env_logger",
+ "generic-array",
+ "hkdf",
+ "hmac",
+ "libc",
+ "log",
+ "nom 8.0.0",
+ "once_cell",
+ "openssl",
+ "p256",
+ "p384",
+ "pkcs8",
+ "rand",
+ "rand_core 0.6.4",
+ "rcgen",
+ "sec1",
+ "sha2",
+ "signature",
+ "spki",
+ "subtle",
+ "time",
+ "wolfssl",
+ "x25519-dalek",
+ "x509-cert",
+ "x509-parser",
 ]
 
 [[package]]
